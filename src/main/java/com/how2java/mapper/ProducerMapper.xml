@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.how2java.mapper.ProducerMapper">
+    <insert id="add" parameterType="Producer" >
+	        insert into producer ( producername,zipCode,phoneNumber) values (#{producername},#{zipcode},#{phonenumber})
+	    </insert>
+
+    <delete id="delete" parameterType="Producer" >
+	        delete from producer where id= #{id}
+	    </delete>
+
+    <select id="get" parameterType="_int" resultType="Producer">
+	        select * from   producer  where id= #{id}
+	    </select>
+    <select id="getName"  resultType="Producer">
+	        select * from   producer  where producername= #{producername}
+	    </select>
+    <update id="update" parameterType="Producer" >
+	        update producer set producername=#{producername} where id=#{id}
+	    </update>
+    <select id="list" resultType="Producer">
+	        select * from   producer
+	    </select>
+</mapper>
