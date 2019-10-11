@@ -128,7 +128,7 @@
         <input type="text" id="lPosition" />
     </div>
     <div class="int">
-        <label for="companyAddress">公司地址:</label>
+        <label for="companyAddress">公司地址</label>
         <input type="text" id="companyAddress" />
     </div>
     <div class="int">
